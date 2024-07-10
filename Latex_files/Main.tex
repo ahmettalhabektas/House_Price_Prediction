@@ -1,0 +1,158 @@
+%----------------------------------------------------------------------------------------
+%				PACKAGES				
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} 
+\usepackage[margin=1in]{geometry} 	% For page dimensions, margins, etc.
+\usepackage{fancyhdr} 			% Required for custom headers
+\usepackage{lastpage} 			% Required to determine the last page for the footer
+\usepackage{bm} 			% Bold math symbols inside the equation
+\usepackage{mathtools} 			% For mathematical typesetting, it includes amsmath, too
+%http://texdoc.net/texmf-dist/doc/latex/amsmath/amsldoc.pdf
+\usepackage{amssymb} 			% For mathematical symbols,
+%http://milde.users.sourceforge.net/LUCR/Math/mathpackages/amssymb-symbols.pdf
+\usepackage{array} 			% Extending the array and tabular environments
+\usepackage{multirow} 			% Create tabular cells spanning multiple rows
+\usepackage{graphicx} 			% Required to insert images
+\usepackage{subfig} 			% Used for subfigures
+\usepackage{lscape} 			% To make defined pages' orientation landscape
+\usepackage{hyperref} 			% Extensive support for hypertext (URL)
+\usepackage[nottoc,numbib]{tocbibind} 	% Add bibliography/index/contents to Table of Contents
+\usepackage{listings} 			% Required for insertion of code
+\usepackage{xcolor} 			% For custom colors to be used
+\usepackage{float} 			% Required for positioning figures and table at the exact location of LaTeX code
+\usepackage[shortlabels]{enumitem} 	% Control layout of itemize, enumerate, description
+\usepackage[framed,numbered]{mcode} 	% Pretty-print MATLAB source code
+\usepackage[open,openlevel=1]{bookmark} % It is used to have bookmarks in the PDF file created
+\usepackage{booktabs} 			% Publication quality tables in LaTeX
+% More info about quality tables: https://inf.ethz.ch/personal/markusp/teaching/guides/guide-tables.pdf
+\usepackage{comment} 			% Selectively include/exclude portions of text
+\usepackage{csquotes}			% Context sensitive quotation facilities
+\usepackage{enumitem} 			% To use different labeling for enumerate
+\usepackage[normalem]{ulem} 		% Package for underlining
+\usepackage[super]{nth}			% nth – Generate English ordinal numbers
+%\usepackage[style=verbose-ibid,backend=bibtex]{biblatex} % Sophisticated Bibliographies in LATEX
+
+%----------------------------------------------------------------------------------------
+%				OTHER DOCUMENT CONFIGURATIONS 
+%----------------------------------------------------------------------------------------
+
+\linespread{1.2} % Line spacing size
+\geometry{headheight=15pt,headsep=0.15in,includehead} % Level 1 heading adjustments
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorNameI} % Top left header
+%\lhead{\hmwkGroup} % Use this one for group reports, and comment the upper line
+\chead{\hmwkClass} % Center header
+\rhead{\hmwkTitle} % Top right header
+\lfoot{} % Bottom left footer, left blank
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\cfoot{} % Bottom center footer, left blank
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%				HOMEWORK AND STUDENT DETAILS
+%----------------------------------------------------------------------------------------
+
+
+\newcommand{\hmwkTitle}{Project 2} % Assignment title
+\newcommand{\hmwkDueDate}{Sunday, May 21, 2023} % Due date 
+\newcommand{\hmwkClass}{UCK\ 358E} % Course/class code
+\newcommand{\hmwkClassInstructor}{Asst. Prof. Barış Başpınar} % Teacher/lecturer Asst. Assoc. Prof. Dr.
+\newcommand{\hmwkGroup}{Group \#3} % Comment this line out one for group reports
+\newcommand{\hmwkCRN}{21600 - Thrusday} % CRN and Session
+
+% Students' full names
+\newcommand{\hmwkAuthorNameI}{Ahmet Talha Bektaş} % 1st Author's Name
+%\newcommand{\hmwkAuthorNameII}{} % 2nd Author's Name
+%\newcommand{\hmwkAuthorNameIII}{} % 3rd Author's Name
+%\newcommand{\hmwkAuthorNameIV}{} % 4th Author's Name
+
+% Students' IDs
+\newcommand{\hmwkAuthorIDI}{110210137}
+%\newcommand{\hmwkAuthorIDII}{}
+%\newcommand{\hmwkAuthorIDIII}{}
+%\newcommand{\hmwkAuthorIDIV}{}
+
+% Students' e-mail addresses to be contacted
+\newcommand{\hmwkAuthorEmailI}{bektasa21@itu.edu.tr} % 1st Author's Email
+%\newcommand{\hmwkAuthorEmailII}{} % 2nd Author's Email
+%\newcommand{\hmwkAuthorEmailIII}{} % 3rd Author's Email
+%\newcommand{\hmwkAuthorEmailIV}{} % 4th Author's Email
+
+%----------------------------------------------------------------------------------------
+%				TITLE PAGES
+%----------------------------------------------------------------------------------------
+\pagenumbering{gobble}
+\title{
+	\includegraphics[width=0.5\linewidth]{./fig/itu_logo}\\	
+	\vspace{.5in}
+	\LARGE{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+	\Large{\textbf{\hmwkCRN}}\\
+	\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+	\vspace{0.1in}\large{\textit{\hmwkClassInstructor}}
+	\vspace{1in}
+}
+
+\author{
+	%First Author
+	\textbf{\hmwkAuthorNameI}\thanks{\hmwkAuthorEmailI} \ - \textbf{\hmwkAuthorIDI} \\
+	%Second Author
+	%\textbf{\hmwkAuthorNameII}\thanks{\hmwkAuthorEmailII} \ - \textbf{\hmwkAuthorIDII} \\
+	%Third Author
+	%\textbf{\hmwkAuthorNameIII}\thanks{\hmwkAuthorEmailIII} \ - \textbf{\hmwkAuthorIDIII} \\
+	%Fourth Author
+	%\textbf{\hmwkAuthorNameVI}\thanks{\hmwkAuthorEmailVI} \ - \textbf{\hmwkAuthorIDVI} \\
+	}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+%				ADDITIONAL COMMANDS
+%----------------------------------------------------------------------------------------
+
+%\newcommand{\bx}{\boldsymbol{x}} % Shorter of bold x for equations
+
+%----------------------------------------------------------------------------------------
+%				DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%				TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Use this for the levels of headings listed in the ToC
+
+\newpage
+\thispagestyle{empty} % For no page numbering
+\tableofcontents
+\newpage 
+\pagenumbering{arabic} 
+
+%----------------------------------------------------------------------------------------
+%	Section 1
+%----------------------------------------------------------------------------------------
+
+\input{Part01}
+%----------------------------------------------------------------------------------------
+%	Section 2
+%----------------------------------------------------------------------------------------
+
+
+\newpage
+\bibliographystyle{IEEEtran}
+
+
+%----------------------------------------------------------------------------------------
+%				APPENDICES
+%----------------------------------------------------------------------------------------
+
+
+\end{document} 
